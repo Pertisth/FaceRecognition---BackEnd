@@ -18,12 +18,23 @@ const appClarifai = new Clarifai.App({
 const db = knex({
     client: 'pg',
     connection:{
-        host:"127.0.0.1",
-        user :"postgres",
-        password:"123456",
-        database: "faceRecognition",
+        connectionString:process.env.DATABASE_URL,
+        ssl :true
     }
 });
+
+//**************************/
+// offline use only
+// const db = knex({
+//     client: 'pg',
+//     connection:{
+//         host:"postgresql-amorphous-07501",
+//         user :"postgres",
+//         password:"123456",
+//         database: "faceRecognition",
+//     }
+// });
+/**************************/
 
 
 
