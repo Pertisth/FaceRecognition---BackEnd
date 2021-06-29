@@ -12,7 +12,6 @@ const appClarifai = new Clarifai.App({
     apiKey: process.env.REACT_APP_API
   });
 
-//   "92b6ac80851240b39b3027e6b162ce44"
 
 
 const db = knex({
